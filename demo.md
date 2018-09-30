@@ -129,3 +129,6 @@ $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$</div>
 ```
 The final element.
 ```
+
+* 7<sub>12</sub>
+* 8<sup>12</sup>
