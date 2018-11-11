@@ -75,17 +75,17 @@ for( int i = 0 ; i > 0 ; i -- ){
 ~~~
 - 机器语言
 ```
- LOD 10
- STO X
- LOD X
- JMZ 11
- ADD Y
- STO Y
- LOD X
- SUB #1
- STO X
- JMP 3
- HTL
+ 0  LOD 10
+ 2  STO X
+ 4  LOD X
+ 6  JMZ 
+ 8  ADD Y
+ 10 STO Y
+ 12 LOD X
+ 14 SUB #1
+ 16 STO X
+ 18 JMP 3
+ 20 HTL
 ```
 - 高级语言于低级语言之间的区别与联系
     - 区别：高级语言的语法更符合人的思维，而且句子功能更加强大，但无法被机器直接识别；低级语言的语法则更偏向于机器思维，每个句子的都只能执行最基础的功能，但能被机器直接识别。
