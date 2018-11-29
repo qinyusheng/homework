@@ -25,3 +25,70 @@
 
 ## 结束语
 大数据技术的蓬勃发展已成定局，其对社会带来的利终究是大过于弊。我们不能阻止这种大势，但也不能一味让道德伦理向技术屈服。只希望国家能够及早对这一技术的发展做出正确的引导，有效的权力界定。既能让这一技术继续推发展，也能保护到多数人的权益。
+
+
+# 排序算法
+
+## 冒泡排序
+在该排序中，一组数据中最大的一个将会一步一步“**浮**”到最后一个位置，每次只得到一个数据。
+
+### 算法概述
+- 比较相邻两个元素，若前一个元素大于后一个元素，就将两个元素调换位置，直到最后一个元素
+- 一次循环结束，保持该过程的最后一个元素不动，对剩余的部分重复该过程
+
+### 代码示例
+~~~
+#include <stdio.h>
+int main(){
+	int array[5] = {1 , 4 , 8 , 2 , 5};
+	int len = 5 , num ;
+	for( int i = 0 ; i < len ; i ++ ){
+		for( int j = 0 ; j < len - i - 1 ; j ++ ){
+			if(array[j] > array[j + 1]){
+				num = array[j];
+				array[j] = array[j + 1];
+				array[j + 1] = num;
+			}
+		}
+	}
+	for( int i = 0 ; i < len ; i ++ )
+		printf("%d",array[i]);
+	return 0;
+}
+~~~
+
+### 输出结果
+![](images/maopao.png)
+
+## 选择排序
+每次从全部得数据中选择出最大/最小值，放在最前/最后的位置。
+
+### 算法概述
+- 找出一组数据中最大的一个，将该数据的索引储存在变量中
+- 根据索引找到该数据，并将其与第一个数据交换位置
+- 保持第一个数据不变，对剩下的数据重复该操作
+
+### 代码示例
+~~~
+#include <stdio.h>
+int main(){
+	int array[5] = {1 , 4 , 8 , 2 , 5};
+	int len = 5 , num , shu ;
+	for( int i = 0 ; i < len ; i ++ ){
+		num = i;
+		for( int j = i + 1 ; j < len ; j ++ ){
+			if(array[num] < array[j])
+				num = j;
+		}
+		shu = array[num];
+		array[num] = array[i];
+		array[i] = shu;
+	}
+	for( int i = 0 ; i < len ; i ++ )
+		printf("%d",array[i]);
+	return 0;
+}
+~~~
+
+### 输出结果
+![](images/xuanze.png)
