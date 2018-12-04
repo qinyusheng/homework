@@ -56,7 +56,7 @@ int main(){
 	output();/*打印出初始地图
 	 正式开始游戏*/ 
 	while(if_dead()){
-		input = getch()/*读取玩家输入的指令*/ 
+		input = getchar()/*读取玩家输入的指令*/ 
 		/* 识别并执行指令 */
 		switch(input){
 			case 'A':
@@ -150,7 +150,7 @@ void gameover(){
 ~~~
 
 ### 效果展示
-![](images/会动的蛇.gif)
+![](images/snake_move.gif)
 
 ## 会吃东西的蛇
 ### 实验代码
@@ -214,7 +214,7 @@ int main(){
 	output();/*打印出初始地图
 	 正式开始游戏*/ 
 	while(if_dead()){
-		input = getch()/*读取玩家输入的指令*/ 
+		input = getchar()/*读取玩家输入的指令*/ 
 		/* 识别并执行指令 */
 		switch(input){
 			case 'A':
