@@ -155,7 +155,7 @@ void gameover(){
 ## 会吃东西的蛇
 ### 实验代码
 ~~~
-/* 贪吃蛇移动*/
+/* 贪吃蛇吃食物*/
 
 #include <stdio.h>
 #include <stdlib.h>
